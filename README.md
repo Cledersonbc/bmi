@@ -8,6 +8,13 @@ A primeira etapa do desenvolvimento foca em Testes Funcionais de Sistemas com Se
 	<img src="imgs/view-bmi.png"></img>
 </p>
 
+## Pré-requisitos
+Você precisa ter um **webdriver** em sua máquina e adicionado ao *path* do seu usuário ou do sistema.
+* Firefox: https://github.com/mozilla/geckodriver/releases/latest
+* Chrome: https://chromedriver.chromium.org/downloads
+
+Caso seu sistema operacional seja Linux ou MacOS, pesquise pelos comandos corretos de instalação em vez de baixar e instalar manualmente.
+
 No momento o sistema não faz nenjum tipo de comunicação com o banco de dados, podem ser testado livremento em qualquer máquina com uma IDE de Java instalada.
 <p align="center">
 	<img src="imgs/view-login.png"></img>

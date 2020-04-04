@@ -9,8 +9,8 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>edu.br.projects.selenium</groupId>
-	<artifactId>page-object-pattern</artifactId>
+	<groupId>edu.br.edu.bmi</groupId>
+	<artifactId>bmi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Body Mass Index</name>
 	<description>Springboot BMI application to apply tests Page Object Pattern and Fluent Interface with Selenium in Functional

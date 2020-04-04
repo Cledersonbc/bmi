@@ -19,6 +19,8 @@ public class HomePage {
 	public HomePage calculateBMI(double weight, double height) {
 		WebDriver driver = WebDriverFactory.getFirefoxDriver();
 
+		driver.get("http://localhost:8080/home");
+
 		driver.findElement(byWeightField()).clear();
 		driver.findElement(byWeightField()).sendKeys(String.valueOf(weight));
 
