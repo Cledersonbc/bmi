@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<!--Import materialize.css-->
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!--Let browser know website is optimized for mobile-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<title>BMI System</title>
+</head>
+<body>
+	<nav>
+		<div class="nav-wrapper purple darken-3">
+			<a href="#" class="brand-logo" title="BMI System">BMI System</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="#about-modal" class="modal-trigger" title="Sobre">Sobre</a></li>
+				<li><a href="/logout" title="Sair">Sair</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="row">
+		<div class="col s12 m12">
+			<div class="card grey lighten-4">
+				<div class="card-content">
+					<span class="card-title">Cálculo de IMC</span>
+					<p>Esta aplicação realiza o cálculo de IMC - Índice de Massa
+						Corporal de uma pessoa.</p>
+				</div>
+
+				<div class="row" style="margin-left: auto; margin-right: auto">
+					<div class="col s12 m12">
+						<div class="card">
+							<div class="card-content">
+								<span class="card-title">Calculadora</span>
+
+								<div class="row">
+									<form class="col s12">
+										<div class="row">
+											<div class="input-field col s6">
+												<input id="weight" type="number" value="1" min="1"
+													max="1000"> <label for="weight">Massa (kg)</label>
+											</div>
+											<div class="input-field col s6">
+												<input id="height" type="number" value="1" min="1"
+													max="1000"> <label for="height">Altura (m)</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="input-field col s12 right">
+												<input readonly value=" " id="result" type="text"> <label
+													for="result">Resultado (IMC)</label>
+											</div>
+										</div>
+									</form>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-action">
+					<a id="calc" class="waves-effect waves-light btn purple darken-3"
+						onclick="calcular()"><i class="material-icons left">poll</i>Calcular</a>
+					<a id="clear" class="waves-effect waves-light btn red"
+						onclick="limpar()"><i class="material-icons left"
+						onclick="limpar">clear</i>Limpar</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="about-modal" class="modal">
+		<div class="modal-content">
+			<h4>Sobre o BMI System</h4>
+			<p>Este sistema está sob desenvolvimento para fins de estudos em <b>Testes funcionais</b>, <b>unitários</b>, <b>de integração</b>, <b>carregamento</b> e <b>segurança</b>.</p>
+			<p>A primeira etapa do desenvolvimento foca em Testes Funcionais de Sistemas com Selenium, aplicando o <i>Page Object Pattern</i> e <i>Fluent Interface</i> com <b>Selenium Webdriver</b>.</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Sair</a>
+		</div>
+	</div>
+
+	<!-- Compiled and minified JavaScript -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script>
+		function calcular() {
+			const weight = document.querySelector("#weight").value;
+			const height = document.querySelector("#height").value;
+			const result = weight / (height * height);
+			document.querySelector("#result").value = result.toFixed(2);
+		}
+		function limpar() {
+			document.querySelector("#weight").value = "";
+			document.querySelector("#height").value = "";
+			document.querySelector("#result").value = "";
+		}
+		$(document).ready(function() {
+			$('.modal').modal();
+		});
+	</script>
+</body>
+</html>
