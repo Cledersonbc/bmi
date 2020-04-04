@@ -1,5 +1,5 @@
 # BMI System
-*Springboot BMI application to apply tests Page Object Pattern and Fluent Interface with Selenium in Functional Tests*.
+*Springboot BMI application to apply Page Object Pattern and Fluent Interface with Selenium in Functional Tests*.
 
 Este sistema está sob desenvolvimento para fins de estudos em **Testes funcionais, unitários, de integração, carregamento e segurança**.
 
